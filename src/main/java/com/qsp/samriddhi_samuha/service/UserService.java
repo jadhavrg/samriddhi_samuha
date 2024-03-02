@@ -67,7 +67,7 @@ public class UserService
 	
 	public ResponseEntity<ResponseStructure<User>> updateUser(int id, User user) 
 	{
-		User dbUser = new User() ;
+		User dbUser = dao.getUser(id);
 		ResponseStructure<User> structure = new ResponseStructure<>() ;
 		if (dbUser != null) 
 		{
