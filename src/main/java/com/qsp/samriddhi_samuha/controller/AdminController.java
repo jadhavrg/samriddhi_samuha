@@ -24,7 +24,7 @@ public class AdminController
 		return service.saveAdmin(admin) ;
 	}
 	
-	@GetMapping("/admin ")
+	@GetMapping("/admin")
 	public ResponseEntity<ResponseStructure<Admin>> logIn(@RequestParam String email,@RequestParam String password) 
 	{
 		return service.logIn(email, password) ;

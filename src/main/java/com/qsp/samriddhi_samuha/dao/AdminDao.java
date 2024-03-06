@@ -38,4 +38,8 @@ public class AdminDao
 		}
 		return null ;
 	}
+	
+	public void name() {
+		
+	}
 }

@@ -28,7 +28,7 @@ public class UserDao
 		{
 			return optional.get() ;
 		}
-		throw new IdNotFound("User with given id is not present...!!");
+		return null ;
 	}
 	
 	public List<User> getAllUser() 
@@ -41,7 +41,7 @@ public class UserDao
 		Optional<User> optional = repo.findById(id) ;
 		if (optional.isEmpty()) 
 		{
-			throw new IdNotFound("User with given id is not present...!!");
+			return null ;
 		}
 		repo.deleteById(id);
 		return optional.get() ;
@@ -52,7 +52,7 @@ public class UserDao
 		Optional<User> optional = repo.findById(id) ;
 		if (optional.isEmpty()) 
 		{
-			throw new IdNotFound("User with given id is not present...!!");
+			return null ;
 		}
 		user.setId(id);
 		return repo.save(user) ;
